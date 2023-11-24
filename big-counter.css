@@ -1,0 +1,42 @@
+.pace {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.pace.pace-inactive .pace-progress {
+	display: none;
+}
+
+.pace .pace-progress {
+	position: fixed;
+	z-index: 3000;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	transition: 1s ease-out;
+
+	-webkit-transform: translate3d(0, 0, 0) !important;
+	-ms-transform: translate3d(0, 0, 0) !important;
+	transform: translate3d(0, 0, 0) !important;
+}
+
+.pace .pace-progress:after {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: .5rem;
+	content: attr(data-progress-text);
+	font-family: "TNW", sans-serif;
+	font-weight: 100;
+	font-size: 30rem;
+	line-height: 1;
+	text-align: right;
+	color: #ff6600;
+}
